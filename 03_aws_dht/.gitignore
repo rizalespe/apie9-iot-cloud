@@ -1,0 +1,11 @@
+# Secret credentials — never commit these
+secrets.h
+certificates/
+
+# macOS
+.DS_Store
+
+# Arduino build artifacts
+build/
+*.bin
+*.elf
