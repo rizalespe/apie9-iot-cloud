@@ -76,8 +76,18 @@ void connectWiFi() {
     }
   }
   Serial.println("\nWiFi connected!");
-  Serial.print("IP Address: ");
+  Serial.print("IPv4 address: ");
+  Serial.println(WiFi.localIP());
+  Serial.print("Gateway: ");
+  Serial.println(WiFi.gatewayIP());
+  Serial.print("DNS: ");
+  Serial.println(WiFi.dnsIP());
+  Serial.print("IPv6 link-local address: ");
   Serial.println(WiFi.linkLocalIPv6());
+  
+  delay(1000);
+  Serial.print("IPv6 global address: ");
+  Serial.println(WiFi.globalIPv6());
 }
 
 // ============================================================
